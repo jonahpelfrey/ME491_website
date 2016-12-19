@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+<body>
+
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">BADGERLOOP</a>
+		</div>
+		<ul class="nav navbar-nav">
+			<li><a href="#">Teams</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>		
+		<ul class="nav navbar-nav navbar-right">
+			<li><a class="fa fa-facebook" href="#"></a></li>
+			<li><a class="fa fa-twitter" href="#"></a></li>
+			<li><a class="fa fa-instagram" href="#"></a></li>
+
+		</ul>
+	</div>
+</nav>
+
+<div class="container-fluid" ng-app="badgerloop" ng-controller="TeamController">
+
+<div class="row">
+<div class="col-md-6">
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4>Member Information</h4>
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="#">Home</a></li>
+			<li><a href="#menu1">Challenge</a></li>
+			<li><a href="#">Solution</a></li>
+		</ul>
+	</div>
+	<div class="panel-body">
+	<table class="table table-striped">
+        	<thead>
+			<tr>
+			<th>Team</th>
+			<th>Firstname</th>
+			<th>Lastname</th>
+			<th>Email</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="x in teams">
+			<td>{{x.team}}</td>
+			<td>{{x.firstname}}</td>
+			<td>{{x.lastname}}</td>
+			<td>{{x.email}}</td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+</div>
+</div>
+</div>
+
+
+</div>
+
+<script src="app.js"></script>
+<script src="teamcontroller.js"></script>
+
+ </body>
+ </html>

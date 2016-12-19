@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+<link rel="stylesheet" href="style.css">
+<body>
+
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">Badgerloop</a>
+		</div>
+		<ul class="nav navbar-nav navbar-right">
+			<li class="active"><a href="#">Home</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</div>
+</nav>
+
+<div class="container-fluid" ng-app="badgerloop" ng-controller="TeamController">
+<div class="row">
+	<div class="col-md-6">
+
+		<div class="panel panel-success">
+			<div class="panel-heading">
+				<button type="button" class="btn btn-success"  ng-click="showPanelBody()">Show</button>
+				<span class="right-float">Electrical team</span>
+			</div>
+			<div class="panel-body" ng-show="showBody">Team Lead:
+				<ul class="nav nav-tabs">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#menu1">Challenge</a></li>
+					<li><a href="#">Solution</a></li>
+					<li><a href="#">Links</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+<div class="col-md-6">
+	<h2>Member Contact Information</h2>
+	<p>Badgerloop Team Leaders</p>
+
+	<table class="table table-striped">
+        	<thead>
+		`	<tr>
+			<th>Team</th>
+			<th>Firstname</th>
+			<th>Lastname</th>
+			<th>Email</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+			<td>Software Lead</td>
+			<td>Jonah</td>
+			<td>Pelfrey</td>
+			<td>jpelfrey@wisc.edu</td>
+			</tr>
+
+			<tr>
+			<td>Electrical Lead</td>
+			<td>Eric</td>
+			<td>Amikam</td>
+			<td>amikam@wisc.edu</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+</div>
+
+
+</div>
+
+<script src="app.js"></script>
+<script src="teamcontroller.js"></script>
+
+ </body>
+ </html>
