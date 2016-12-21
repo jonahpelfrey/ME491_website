@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.3.1/ui-bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="style.css">
+<body>
+
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">Home</a>
+		</div>
+		<ul class="nav navbar-nav">
+			<li class="active"><a href="#">Electrical</a></li>
+			<li><a href="#">Braking</a></li>
+			<li><a href="#">Braking</a></li>
+		</ul>
+	</div>
+</nav>
+
+<div class="container-fluid" ng-app="badgerloop" ng-controller="HomeController"> 
+<div class="row">
+	<div class="col-md-6">
+		<div class="row">
+			<div class="col-md-12" style="text-align: center;">
+				<h4><img src="images/BadgerLoopLogoWhite.png" alt="BadgerLoop" width="400" style="padding-bottom: 10px;"></h4>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+		     	<div class="thumbnail">
+		        	<a href="images/vaccuum/vac3.jpg" target="_blank">
+		          	<img src="images/vaccuum/vac3.jpg" alt="Cinque Terre" style="width:100%">
+		          	<div class="caption">
+		            	<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+		            	<p>
+		            		<a class="btn btn-xs btn-primary" role="button">Expand</a>
+		            		<a class="btn btn-xs btn-default" role="button" href="images/vaccuum/vac3.jpg" download>Download</a>
+		            	</p>
+		          	</div>
+		        	</a>
+		      	</div>
+		    </div>
+		    <div class="col-md-4">
+		     	<div class="thumbnail">
+		        	<a href="images/vaccuum/vac2.jpg" target="_blank">
+		          	<img src="images/vaccuum/vac2.jpg" alt="Cinque Terre" style="width:100%">
+		          	<div class="caption">
+		            	<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+		            	<p>
+		            		<a class="btn btn-xs btn-primary" role="button">Expand</a>
+		            		<a class="btn btn-xs btn-default" role="button" href="images/vaccuum/vac2.jpg" download>Download</a>
+		            	</p>
+		          	</div>
+		        	</a>
+		      	</div>
+		    </div>
+		     <div class="col-md-4">
+		     	<div class="thumbnail">
+		        	<a href="images/vaccuum/vac1.jpg" target="_blank">
+		          	<img src="images/vaccuum/vac1.jpg" alt="Cinque Terre" style="width:100%">
+		          	<div class="caption">
+		            	<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+		            	<p>
+		            		<a class="btn btn-xs btn-primary" role="button">Expand</a>
+		            		<a class="btn btn-xs btn-default" role="button" href="images/vaccuum/vac1.jpg" download>Download</a>
+		            	</p>
+		          	</div>
+		        	</a>
+		      	</div>
+		    </div>
+
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="tinfo panel panel-default">
+			<div class="panel-heading">
+				<h4 style="text-align: center; padding-bottom: 10px;">Vaccuum Testing</h4>
+				<div class="btn-group btn-group-justified">
+					<div class="btn-group">
+						<button type="button" class="btn btn-primary" ng-click="showChal()">Challenge</button>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-primary" ng-click="showSpec()">Specifications</button>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-primary" ng-click="showSol()">Solution</button>
+					</div>
+				</div>
+
+			</div>
+			<div class="panel-body" ng-show="challenge">
+				<p>
+					To test off-the-shelf (OTS) electronic systems not rated for low vacuum pressure environments. OTS systems may not perform as expected, generate excessive heat, experience outgassing and other physical anomalies, or experience catastrophic failure due to operation outside of the manufacturer’s designed and expected parameters. The largest concern revolves around heat generation and dissipation. With a low air density, traditional thermal cooling via convection is drastically reduced. This renders many electronic and power systems susceptible to overheating, even within a short amount of time.
+				</p>
+				<p>
+					To properly ascertain the stability of complex OTS systems in this environment, each system can be independently subjected to a vacuum similar to what the entire pod will encounter during the run. This allows for analysis of components not rated for a vacuum environment in a controlled environment, where pressure, temperature, voltage, and current can be monitored while OTS systems are operating at full load. Additionally, devices using non-solid electrolytic capacitors will require special consideration in order to prevent outgassing of non-solid electrolyte in a vacuum environment.
+				</p>
+			</div>
+			<div class="panel-body" ng-show="specs">
+				<p>
+					Saietta motors must endure 60 seconds of run time with a fully simulated load in a low vacuum environment (400 – 1500Pa) and not exceed 220℃ at any point on the surface. Power input to the motor should be 200A at 90V, or 18kW, +/- 5%. Testing one motor should be sufficient to ensure proper operation unless the temperature exceeds 215℃ on the first test, which would require all motors be tested for compliance to thermal requirements.
+				</p>
+				<p>
+					Kelly motor controllers need to be 100% verified for proper operation in a vacuum environment, due to large quantities of wet electrolytic capacitors contained within. Each motor controller will need to be ran to within 10% of maximum power rating for 60 seconds, in a low vacuum environment of 400 – 800Pa, and operate without failure and without exceeding environmental temperature of 200℃.
+				</p>
+				<p>
+					In-line power fuses selected for use must be verified against premature breakage. Fuses rely on resistive elements which heat up and break at a preselected current, but with additional heat generation during normal operation in a vacuum environment the fuses may blow well below the rated current. 250A fuses must be verified to not blow at less than 90% of rated current after operation for 60 seconds in a 400-800Pa environment.
+				</p>
+			</div>
+			<div class="panel-body" ng-show="solution">
+				<p>
+					Research into thermal convection and conduction properties in a low vacuum environment, as well as FEA analysis, has steered the pod design to utilize heat sinks wherever possible to ensure heat can be dissipated to an acceptable level during the run.
+				</p>
+				<p>
+					A vacuum chamber has been constructed to allow individual testing of each component in a vacuum environment. In its current configuration, it can be pressurized to ~1200Pa. Power is fed through 4 independent power feeds, each capable of transferring 150A for a total of 600A of power into the chamber. Control signals are fed through a 25 pin D-sub connector which can be modified for each test independently. A CAN bus and 12V can be delivered through a separate low voltage bus. Chamber access is available through a user accessible hatch to allow for quick change out of test apparatus. Pressure can be monitored externally by an analog vacuum gauge. 
+				</p>
+				<p>
+					A green pressure bleed valve allows for controlled venting of air to pressurize the system after a test is complete, and a red pressure valve is used to link the chamber to the vacuum pump as needed. If the vacuum pump is not rated to hold negative pressure when not running and the chamber is pressurized, then the red valve can be used to isolate the chamber pressure from the pump. Several viewports are installed on the chamber to allow viewing of components during a pressurized test.
+				</p>
+				<p>
+					Motor test: A crowbar circuit has been designed and built to provide a safety mechanism during high power runs. A diode isolates the power supply from any feedback current and an IGBT provides switching to a power resistor network to dissipate energy when the motors are spinning down. Motor is coupled to another identical motor which allows one motor to run in speed control and the other to run in torque control. This allows the test motor to experience a load similar to that of the halbach wheel, and allows for regenerative current to be supplied back into the speed control motor to supply the full power input while supplying the maximum 30 amps available from the power supply.
+				</p>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+
+
+</div>
+
+<script src="app.js"></script>
+<script src="homecontroller.js"></script>
+
+</body>
+</html>

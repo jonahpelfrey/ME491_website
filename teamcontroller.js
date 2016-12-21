@@ -8,15 +8,27 @@ angular.module('badgerloop', []).controller('TeamController', function($scope, $
 	};
 
 	$scope.teams = [
+		{team: "President", firstname: "Dave", lastname: "Van Veen", email: "amikam@wisc.edu"},
+		{team: "Technical Director", firstname: "Duncan", lastname: "Adams", email: "amikam@wisc.edu"},
+		{team: "Operations Director", firstname: "Claire", lastname: "Holesovsky", email: ""},
 		{team: "Electrical", firstname: "Eric", lastname: "Amikam", email: "amikam@wisc.edu"},
+		{team: "Structural Design", firstname: "Anthony", lastname: "Palumbo", email: "amikam@wisc.edu"},
+		{team: "Fabrication", firstname: "Max", lastname: "Henry", email: ""},
+		{team: "Power Systems", firstname: "Jon", lastname: "Barker", email: ""},
 		{team: "Software", firstname: "Jonah", lastname: "Pelfrey", email: "pelfrey@wisc.edu"},
-		{team: "Fabrication", firstname: "Anthony", lastname: "Palumbo", email: ""},
-		{team: "Fabrication", firstname: "Gabe", lastname: "Montoya-Rivera", email: ""},
-		{team: "Structural & Thermal Analysis", firstname: "Ben", lastname: "Moldenhauer", email: ""},
-		{team: "Vaccuum Compatibility", firstname: "Brandon", lastname: "Hahn", email:""},
-		{team: "Team Operations", firstname: "Claire", lastname: "Holesovsky", email: ""},
-		{team: "Braking", firstname: "Ian", lastname: "Wortley", email: ""},
-		{team: "Levitation & Air Suspension", firstname: "Vladimir", lastname: "Bouriakov", email: ""}
+		{team: "Virtual Reality", firstname: "Peter", lastname: "Procek", email: ""},
+		{team: "Composites", firstname: "Nathan", lastname: "Orf", email: ""},
+		{team: "Stability", firstname: "Justin", lastname: "Williams", email: ""},
+		{team: "Controls", firstname: "Vaughn", lastname: "Kottler", email: ""},
+		{team: "Braking", firstname: "Matthew", lastname: "Benbenek", email: ""},
+		{team: "Levitation", firstname: "Ben", lastname: "Farley", email: ""},
+		{team: "Dynamic Modeling", firstname: "Alec", lastname: "Fisher", email: ""},
+		{team: "Feasability", firstname: "Michael", lastname: "Schlicting", email: ""},
+		{team: "Industry Relations", firstname: "Kali", lastname: "Kinziger", email: ""},
+		{team: "Media", firstname: "Eric", lastname: "Schirtzinger", email: ""},
+		{team: "Finance", firstname: "Zuf", lastname: "Wang", email: ""},
+		{team: "Marketing", firstname: "Jack", lastname: "McGinty", email: ""},
+		{team: "Outreach", firstname: "Noah", lastname: "Pulvermacher", email: ""}
 	]
 
 	$scope.advisors = [
