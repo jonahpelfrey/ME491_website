@@ -3,8 +3,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.3.1/ui-bootstrap.min.js"></script>
-
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../css/style.css">
 <body>
 
 <nav class="navbar navbar-inverse">
@@ -25,57 +24,51 @@
 	<div class="col-md-6">
 		<div class="row">
 			<div class="col-md-12" style="text-align: center;">
-				<h4><img src="images/BadgerLoopLogoWhite.png" alt="BadgerLoop" width="400" style="padding-bottom: 10px;"></h4>
+				<h4><img src="../images/BadgerLoopLogoWhite.png" alt="BadgerLoop" width="400" style="padding-bottom: 10px;"></h4>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-md-4">
 		     	<div class="thumbnail">
-		        	<a href="images/vaccuum/vac3.jpg" target="_blank">
-		          	<img src="images/vaccuum/vac3.jpg" alt="Cinque Terre" style="width:100%">
+		          	<img src="../images/vaccuum/th_vac3.jpg" alt="Cinque Terre" style="width:100%">
 		          	<div class="caption">
-		            	<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+				<p>Vaccuum Chamber</p>
 		            	<p>
-		            		<a class="btn btn-xs btn-primary" role="button">Expand</a>
-		            		<a class="btn btn-xs btn-default" role="button" href="images/vaccuum/vac3.jpg" download>Download</a>
+		            		<a class="btn btn-xs btn-primary" role="button" href="../images/vaccuum/vac3.jpg" target="_blank">Expand</a>
+		            		<a class="btn btn-xs btn-default" role="button" href="../images/vaccuum/vac3.jpg" download>Download</a>
 		            	</p>
 		          	</div>
-		        	</a>
 		      	</div>
 		    </div>
 		    <div class="col-md-4">
 		     	<div class="thumbnail">
-		        	<a href="images/vaccuum/vac2.jpg" target="_blank">
-		          	<img src="images/vaccuum/vac2.jpg" alt="Cinque Terre" style="width:100%">
+		          	<img src="../images/vaccuum/th_vac2.jpg" alt="Cinque Terre" style="width:100%">
 		          	<div class="caption">
-		            	<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+				<p>Crowbar Circuit</p>
 		            	<p>
-		            		<a class="btn btn-xs btn-primary" role="button">Expand</a>
-		            		<a class="btn btn-xs btn-default" role="button" href="images/vaccuum/vac2.jpg" download>Download</a>
+		            		<a class="btn btn-xs btn-primary" role="button" href="../images/vaccuum/vac2.jpg" target="_blank">Expand</a>
+		            		<a class="btn btn-xs btn-default" role="button" href="../images/vaccuum/vac2.jpg" download>Download</a>
 		            	</p>
 		          	</div>
-		        	</a>
 		      	</div>
 		    </div>
 		     <div class="col-md-4">
 		     	<div class="thumbnail">
-		        	<a href="images/vaccuum/vac1.jpg" target="_blank">
-		          	<img src="images/vaccuum/vac1.jpg" alt="Cinque Terre" style="width:100%">
+		          	<img src="../images/vaccuum/th_vac1.jpg" alt="Cinque Terre" style="width:100%">
 		          	<div class="caption">
-		            	<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+				<p>Saietta 95-R Shaft Coupling</p>
 		            	<p>
-		            		<a class="btn btn-xs btn-primary" role="button">Expand</a>
-		            		<a class="btn btn-xs btn-default" role="button" href="images/vaccuum/vac1.jpg" download>Download</a>
+		            		<a class="btn btn-xs btn-primary" role="button" href="../images/vaccuum/vac1.jpg" target="_blank">Expand</a>
+		            		<a class="btn btn-xs btn-default" role="button" href="../images/vaccuum/vac1.jpg" download>Download</a>
 		            	</p>
 		          	</div>
-		        	</a>
 		      	</div>
 		    </div>
 
 		</div>
 	</div>
 	<div class="col-md-6">
-		<div class="tinfo panel panel-default">
+		<div class="panel panel-default">
 			<div class="panel-heading">
 				<h4 style="text-align: center; padding-bottom: 10px;">Vaccuum Testing</h4>
 				<div class="btn-group btn-group-justified">
@@ -91,7 +84,7 @@
 				</div>
 
 			</div>
-			<div class="panel-body" ng-show="challenge">
+			<div class="panel-body tinfo" ng-show="challenge">
 				<p>
 					To test off-the-shelf (OTS) electronic systems not rated for low vacuum pressure environments. OTS systems may not perform as expected, generate excessive heat, experience outgassing and other physical anomalies, or experience catastrophic failure due to operation outside of the manufacturer’s designed and expected parameters. The largest concern revolves around heat generation and dissipation. With a low air density, traditional thermal cooling via convection is drastically reduced. This renders many electronic and power systems susceptible to overheating, even within a short amount of time.
 				</p>
@@ -99,7 +92,7 @@
 					To properly ascertain the stability of complex OTS systems in this environment, each system can be independently subjected to a vacuum similar to what the entire pod will encounter during the run. This allows for analysis of components not rated for a vacuum environment in a controlled environment, where pressure, temperature, voltage, and current can be monitored while OTS systems are operating at full load. Additionally, devices using non-solid electrolytic capacitors will require special consideration in order to prevent outgassing of non-solid electrolyte in a vacuum environment.
 				</p>
 			</div>
-			<div class="panel-body" ng-show="specs">
+			<div class="panel-body tinfo" ng-show="specs">
 				<p>
 					Saietta motors must endure 60 seconds of run time with a fully simulated load in a low vacuum environment (400 – 1500Pa) and not exceed 220℃ at any point on the surface. Power input to the motor should be 200A at 90V, or 18kW, +/- 5%. Testing one motor should be sufficient to ensure proper operation unless the temperature exceeds 215℃ on the first test, which would require all motors be tested for compliance to thermal requirements.
 				</p>
@@ -110,7 +103,7 @@
 					In-line power fuses selected for use must be verified against premature breakage. Fuses rely on resistive elements which heat up and break at a preselected current, but with additional heat generation during normal operation in a vacuum environment the fuses may blow well below the rated current. 250A fuses must be verified to not blow at less than 90% of rated current after operation for 60 seconds in a 400-800Pa environment.
 				</p>
 			</div>
-			<div class="panel-body" ng-show="solution">
+			<div class="panel-body tinfo" ng-show="solution">
 				<p>
 					Research into thermal convection and conduction properties in a low vacuum environment, as well as FEA analysis, has steered the pod design to utilize heat sinks wherever possible to ensure heat can be dissipated to an acceptable level during the run.
 				</p>
@@ -133,8 +126,8 @@
 
 </div>
 
-<script src="app.js"></script>
-<script src="homecontroller.js"></script>
+<script src="../app.js"></script>
+<script src="../controllers/homecontroller.js"></script>
 
 </body>
 </html>

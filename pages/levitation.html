@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../css/style.css">
+
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.3.1/ui-bootstrap.min.js"></script>
 
-<link rel="stylesheet" href="style.css">
 <body>
 
 <nav class="navbar navbar-inverse">
@@ -25,56 +28,50 @@
 	<div class="col-md-6">
 		<div class="row">
 			<div class="col-md-12" style="text-align: center;">
-				<h4><img src="images/BadgerLoopLogoWhite.png" alt="BadgerLoop" width="400" style="padding-bottom: 10px;"></h4>
+				<h4><img src="../images/BadgerLoopLogoWhite.png" alt="BadgerLoop" width="400" style="padding-bottom: 10px;"></h4>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-md-4">
 		     	<div class="thumbnail">
-		        	<a href="images/braking/fea.jpg" target="_blank">
-		          	<img src="images/braking/fea.jpg" alt="Cinque Terre" style="width:100%">
+		          	<img src="../images/braking/th_fea.jpg" alt="Cinque Terre" style="width:100%">
 		          	<div class="caption">
 		            	<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
 		            	<p>
-		            		<a class="btn btn-xs btn-primary" role="button">Expand</a>
-		            		<a class="btn btn-xs btn-default" role="button" href="images/braking/fea.jpg" download>Download</a>
+		            		<a class="btn btn-xs btn-primary" role="button" href="../images/braking/fea.jpg" target="_blank">Expand</a>
+		            		<a class="btn btn-xs btn-default" role="button" href="../images/braking/fea.jpg" download>Download</a>
 		            	</p>
 		          	</div>
-		        	</a>
 		      	</div>
 		    </div>
 		    <div class="col-md-4">
 		     	<div class="thumbnail">
-		        	<a href="images/braking/frame2.jpg" target="_blank">
-		          	<img src="images/braking/frame2.jpg" alt="Cinque Terre" style="width:100%">
+		          	<img src="../images/braking/th_frame2.jpg" alt="Cinque Terre" style="width:100%">
 		          	<div class="caption">
 		            	<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
 		            	<p>
-		            		<a class="btn btn-xs btn-primary" role="button">Expand</a>
-		            		<a class="btn btn-xs btn-default" role="button" href="images/braking/frame2.jpg" download>Download</a>
+		            		<a class="btn btn-xs btn-primary" role="button" href="../images/braking/frame2.jpg" target="_blank">Expand</a>
+		            		<a class="btn btn-xs btn-default" role="button" href="../images/braking/frame2.jpg" download>Download</a>
 		            	</p>
 		          	</div>
-		        	</a>
 		      	</div>
 		    </div>
 		     <div class="col-md-4">
 		     	<div class="thumbnail">
-		        	<a href="images/braking/frame1.png" target="_blank">
-		          	<img src="images/braking/frame1.png" alt="Cinque Terre" style="width:100%">
+		          	<img src="../images/braking/th_frame1.png" alt="Cinque Terre" style="width:100%">
 		          	<div class="caption">
 		            	<p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
 		            	<p>
-		            		<a class="btn btn-xs btn-primary" role="button">Expand</a>
-		            		<a class="btn btn-xs btn-default" role="button" href="images/braking/frame1.png" download>Download</a>
+		            		<a class="btn btn-xs btn-primary" role="button" href="../images/braking/frame1.jpg" target="_blank">Expand</a>
+		            		<a class="btn btn-xs btn-default" role="button" href="../images/braking/frame1.png" download>Download</a>
 		            	</p>
 		          	</div>
-		        	</a>
 		      	</div>
 		    </div>
 		</div>
 	</div>
 	<div class="col-md-6">
-		<div class="tinfo panel panel-default">
+		<div class="panel panel-default">
 			<div class="panel-heading">
 				<h4 style="text-align: center; padding-bottom: 10px;">Air Suspension</h4>
 				<div class="btn-group btn-group-justified">
@@ -90,31 +87,26 @@
 				</div>
 
 			</div>
-			<div class="panel-body" ng-show="challenge">
+			<div class="panel-body tinfo" ng-show="challenge">
 				<p>
 					The pneumatic suspension system was designed to compensate for variation in magnetic levitation force. Much of the levitation design relies on simulation and small scale testing. The pneumatic suspension provides an added layer of safety for pod performance. Additionally, the suspension system also performs the function of brake positioning actuation.
 				</p>
 			</div>
-			<div class="panel-body" ng-show="specs">
+			<div class="panel-body tinfo" ng-show="specs">
 				<p>
 					The pod was estimated at 2000 lbs. but the actuators needed to be be able to withstand significant differences in weight and balance. The tolerance for the halbach wheels was roughly 4 mm total clearance. The system needed to be able to withstand function within significant magnetic fields, vibrations, shock, and require simple electronic interface. Active electrical sensor feedback would not be an option. The system would also need to function in a vacuum.
 
 				</p>
 			</div>
-			<div class="panel-body" ng-show="solution">
-				<div class="row" style="padding-bottom: 10px;">
-					<div class="col-md-4"><button class="btn btn-sm btn-success" ng-click="showPartA()">Prev</button></div>
-					<div class="col-md-4"></div>
-					<div class="col-md-4"><button class="btn btn-sm btn-success" style="float: right;" ng-click="showPartB()">Next</button></div>
-				</div>
-				<p ng-show="pa">
+			<div class="panel-body tinfo" ng-show="solution">
+				<p>
 					By providing feedback control to the halbach arrays, the halbach wheels would maintain their position inside the I-beam even if magnetic levitation force varied. The pneumatic suspension system also replaced the previous design for braking, which made use of electronic actuators to raise and lower the braking wheels. Instead, the braking wheels would be rigidly mounted to the pod, and the halbach arrays would be raised lowering the pod onto the braking wheels.
 
 				</p>
-				<p ng-show="pa">
+				<p>
 					Air springs commonly used for automotive suspensions replaced traditional actuators eliminating the risk of sensitive electrical components failing in the tube vacuum, or moving mechanical parts have lubricant off-gassing and other problems. Air springs also provide an advantage over the previous telescoping actuators in that air springs can withstand significant misalignment, shear, vibrations, shock, and other loads expected during pod function. Air springs themselves tend to be much lighter for their range of load ratings. At roughly 5 lbs. the Goodyear 2B6-535 air springs used on the pod are rated to withstand loading ranging from 300 lbs. up to 22000 lbs. Higher performance made air springs the clear choice to replace actuators onboard the pod. Lower cost was a bonus. Electrically simple solenoid flow valves would control the pressure in the air springs to adjust the position of the halbach arrays relative to the rest of the pod. Next, the system needed feedback of some kind.
 				</p>
-				<p ng-show="pb">
+				<p>
 					Due to the high magnetic fields, high speeds, low lighting, and other conditions, a traditional electronic proximity sensor would be expensive, demand rigorous testing/calibration, and likely be unreliable. The Badgerloop pod does contain proximity sensors onboard, but the time delay is too large to be used for an active suspension system. Following industry’s example, a height control valve provides the feedback control for the pneumatic suspension system. In the automotive industry, a leveling valve usually only functions to maintain the height at a set distance. Due to the potential for varying levitation height gap between the halbach arrays and the tube floor, the height control valve needed a datum reference connecting to the floor of the tube. For this the pod uses an idler datum wheel mounted on a hinge pivot. The teflon datum wheel provides position feedback mechanically, taking the place of other proximity sensors. Constant pressure across all air springs would not level a pod with uneven weight distribution. In order to balance the pod, height control would need to occur at three points to define a stable plane. The pneumatic suspension thereby solves all of these problems in a reliable, industry proven, simple, passive solution.
 				</p>
 			</div>
@@ -127,8 +119,8 @@
 
 </div>
 
-<script src="app.js"></script>
-<script src="homecontroller.js"></script>
+<script src="../app.js"></script>
+<script src="../controllers/homecontroller.js"></script>
 
 </body>
 </html>
