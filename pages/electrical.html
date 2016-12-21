@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.3.1/ui-bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+<link rel="stylesheet" href="../css/style.css">
+<body>
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">Home</a>
+		</div>
+		<ul class="nav navbar-nav">
+			<li><a href="#electrical">Electrical</a></li>
+			<li><a href="#braking">Braking</a></li>
+			<li><a href="#levitation">Air Suspension</a></li>
+			<li><a href="#vaccuum">Vaccuum Testing</a></li>
+			<li><a href="#contact">Members</a></li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+			<li><a class="fa fa-facebook" href="#"></a></li>
+			<li><a class="fa fa-twitter" href="#"></a></li>
+			<li><a class="fa fa-instagram" href="#"></a></li>
+
+		</ul>
+	</div>
+</nav>
+
+<div class="container-fluid" ng-app="badgerloop" ng-controller="HomeController"> 
+<div class="row">
+	<div class="col-md-6">
+		<div class="row">
+			<div class="col-md-12" style="text-align: center;">
+				<h4><img src="../images/BadgerLoopLogoWhite.png" alt="BadgerLoop" width="400" style="padding-bottom: 10px;"></h4>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+		     	<div class="thumbnail">
+		          	<img src="../images/electrical/th_elec1.jpg" alt="Cinque Terre" style="width:100%">
+		          	<div class="caption">
+		            	<p>Battery Cell Heat Rise Data</p>
+		            	<p>
+		            		<a class="btn btn-xs btn-primary" role="button" href="../images/electrical/elec1.jpg" target="_blank">Expand</a>
+		            		<a class="btn btn-xs btn-default" role="button" href="../images/electrical/elec1.jpg" download>Download</a>
+		            	</p>
+		          	</div>
+		      	</div>
+		    </div>
+		    <div class="col-md-4">
+		     	<div class="thumbnail">
+		          	<img src="../images/electrical/th_elec2.jpg" alt="Cinque Terre" style="width:100%">
+		          	<div class="caption">
+				<p>MCM Printed Circuit Board</p>
+		            	<p>
+		            		<a class="btn btn-xs btn-primary" role="button" href="../images/electrical/elec2.jpg" target="_blank">Expand</a>
+		            		<a class="btn btn-xs btn-default" role="button" href="../images/electrical/elec2.jpg" download>Download</a>
+		            	</p>
+		          	</div>
+		      	</div>
+		    </div>
+		     <div class="col-md-4">
+		     	<div class="thumbnail">
+		          	<img src="../images/electrical/th_elec3.jpg" alt="Cinque Terre" style="width:100%">
+		          	<div class="caption">
+				<p>Motor Test Thermal Imaging</p>
+		            	<p>
+		            		<a class="btn btn-xs btn-primary" role="button" href="../images/electrical/elec3.jpg" target="_blank">Expand</a>
+		            		<a class="btn btn-xs btn-default" role="button" href="../images/electrical/elec3.jpg" download>Download</a>
+		            	</p>
+		          	</div>
+		      	</div>
+		    </div>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 style="text-align: center; padding-bottom: 10px;">Electrical System</h4>
+				<div class="btn-group btn-group-justified">
+					<div class="btn-group">
+						<button type="button" class="btn btn-primary" ng-click="showChal()">Challenge</button>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-primary" ng-click="showSpec()">Specifications</button>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-primary" ng-click="showSol()">Solution</button>
+					</div>
+				</div>
+
+			</div>
+			<div class="panel-body tinfo" ng-show="challenge">
+				<p>
+					When the Badgerloop Pod travels down the SpaceX test track, it must be capable of measuring of various data points and be able to autonomously react to them accordingly. There are numerous failures that can occur in a matter of milliseconds, so the pod cannot wait for a human to receive the information, make a decision, and send a command back. Things like battery cell isolation, braking, and motor control all require instantaneous feedback to remove the human error and communication lag time. To ensure we brake at the right time and for the right duration, numerous sensors must be integrated to keep track of pod navigation, temperatures, and other pod/tube conditions. The electrical system is responsible for gathering all this data, processing it, and controlling the actuators (Halbach wheels, brakes, air suspension, contactors, etc) accordingly.
+				</p>
+			</div>
+			<div class="panel-body tinfo" ng-show="specs">
+				<p>
+					SpaceX has provided numerous specifications that we designed our system around, but we came up with some specifications of our own based on what functionality we wanted out of the system.
+				</p><hr>
+				<ul>
+					<li style="padding-bottom: 5px;"><b>SpaceX Specifications</b></li>
+						<ol>
+							<li style="padding-bottom: 5px;">
+								Network latency between the Pod and staging area is expected to remain under 10ms.
+							</li>
+							<li style="padding-bottom: 5px;">
+								The battery management system shall isolate the battery in over temperature conditions.
+							</li>
+							<li style="padding-bottom: 5px;">
+								At least two temperature sensors must measure pod/component heat rise at a minimum sampling frequency of 1Hz.
+							</li>
+						</ol>
+				</ul>
+				<ul>
+					<li style="padding-bottom: 5px;"><b>Our Specifications</b></p>
+						<ol>
+							<li style="padding-bottom: 5px;">
+								Our embedded systems must use a distributed hardware framework to achieve decentralization and modularity.
+							</li>
+							<li style="padding-bottom: 5px;">
+								Each Halbach Wheel must have its RPM sampled at 1000Hz.
+							</li>
+						</ol>
+				</ul>
+			</div>
+			<div class="panel-body tinfo" ng-show="solution">
+				<p>
+					To encompass all of the requirements provided by SpaceX, we designed the electrical system around a Controller Area Network using the CANopen protocol. This network features 6 nodes – 1 of which is a Battery Management System (Commercial-Off-The-Shelf), 1 is an Extreme Engineering Solutions wireless connectivity board, and the other 4 are custom Modules designed and built from the ground up to perform localized functionality on the Pod. Each Module is based on a PIC32 microcontroller, and on top is a Printed Circuit Board which contains all of the sub-circuitry needed for Data Acquisition and power load switching for each specific module. The Modules are as follows:
+				</p><hr>
+				<ul>
+					<li style="padding-bottom: 5px;"><b>VNM (Vehicle Navigation Module)</b>
+						<ul>
+							<li style="padding-bottom: 5px;">
+							Employs 3 retroreflective sensors to detect colored tape strips placed in the tube, used for tracking position and allowing for interpolation of velocity. 
+							</li>
+							<li style="padding-bottom: 5px;">
+							Employs 1 accelerometer and 1 gyroscope to measure acceleration in 3 axis (x/y/z) and attitude in 3 axis (roll/pitch/yaw) 
+							</li>
+							<li style="padding-bottom: 5px;">
+							Alerts other modules when position or speed-triggered actions must occur, such as entering the braking state
+							</li>
+						</ul>
+					</li>
+					<li style="padding-bottom: 5px;"><b>MCM (Magnetic Control Module)</b>
+						<ul>
+							<li style="padding-bottom: 5px;">
+							Employs 4 retroreflective encoders to measure the RPM of each Halbach Wheel
+							</li>
+							<li style="padding-bottom: 5px;">
+							Employs 1 proximity sensor to measure pod-track distance 
+							</li>
+							<li style="padding-bottom: 5px;">
+							Uses position data from the VNM to run an open-loop control scheme which provides torque command signals to all 4 brushed DC motor controllers
+							</li>
+						</ul>
+					</li>
+					<li style="padding-bottom: 5px;"><b>BCM (Braking Control Module)</b>
+						<ul>
+							<li style="padding-bottom: 5px;">
+							Employs 6 FETs to engage solid state relays inside the braking system and air suspension system
+							</li>
+							<li style="padding-bottom: 5px;">
+							Engages electromagnetic drum brakes individually on all 4 wheels
+							</li>
+							<li style="padding-bottom: 5px;">
+							Deflates normally closed solenoid valves on the air suspension system
+							</li>
+							<li style="padding-bottom: 5px;">
+							Uses optical encoders on each wheel to run a custom anti-lock braking algorithm
+							</li>
+						</ul>
+					</li>
+					<li style="padding-bottom: 5px;"><b>VSM (Vehicle Safety Module)</b>
+						<ul>
+							<li style="padding-bottom: 5px;">
+							Employs a surface-mount absolute pressure sensor to measure tube/pod pressure
+							</li>
+							<li style="padding-bottom: 5px;">
+							Employs 10 thermistors to measure the temperature of motor armatures, XeS heat frame, braking relays, and 12V batteries
+							</li>
+							<li style="padding-bottom: 5px;">
+							Monitors the high voltage pack and performs safety shutoff functionality in emergency situations.
+							</li>
+						</ul>
+					</li>
+				</ul><hr>
+				<p>
+					In addition to this embedded system, we also have a power system to supply and control power to the 4 Halbach Wheels. This power system is comprised of one custom high voltage battery pack, 4 Kelly HPM14501 brushed DC motor controllers, and 4 Saietta 95-R brushed DC motors. The battery pack operates at 120VDC and can source 1000A of current. The energy inside comes from 165 individual lithium polymer pouch cells, which are connected in a 33-series 5-parallel configuration. There is an industry-grade Battery Management System inside the battery pack, which monitors the voltage and temperature of each cell and handles charging, discharging, cell balancing, thermal cutoffs, and State-of-Charge calculations. To address the lack of convective cooling, the cells are housed in a custom aluminum heat frame lattice structure to absorb most of the heat generated by the cells during the run. Each motor controller hooks up to this battery pack with 4AWG welding cable rated up to 200ºC. The torque commands are sent from the Magnetic Control Module, which simultaneously monitors the status of each Kelly controller to ensure that Halbach Wheel performance is as expected. Each Saietta 95-R motor is connected to a single motor controller, which uses an internal close-loop feedback control scheme to command constant current via Pulse Width Modulation.
+				</p>
+				<p>
+					All of the data gathered by our power systems and Modules gets sent via a 3-wire CAN bus to the Extreme Engineering Solutions embedded CPU, which parses the raw CAN data and packages it according to SpaceX’s networking protocol and sends it to the front end Dashboard via the wireless network inside the tube. 
+				</p>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+
+
+</div>
+
+<script src="../app.js"></script>
+<script src="../controllers/homecontroller.js"></script>
+
+</body>
+</html>
