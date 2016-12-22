@@ -28,6 +28,10 @@ app.config(function($routeProvider) {
 		templateUrl: 'pages/contact.html',
 		controller: 'TeamController'
 	})
+	.when('/structural', {
+		templateUrl: 'pages/structural.html',
+		controller: 'HomeController'
+	})
 	.otherwise({
 		redirectTo: '/'
 	});

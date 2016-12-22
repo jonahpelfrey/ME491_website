@@ -1,0 +1,137 @@
+
+<div class="row">
+	<div class="col-md-6">
+		<div class="row">
+			<div class="col-md-12" style="text-align: center;">
+				<h4><img src="../images/BadgerLoopLogoWhite.png" alt="BadgerLoop" width="400" style="padding-bottom: 10px;"></h4>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+		     	<div class="thumbnail">
+		          	<img src="../images/structural/th_fig1.png" alt="Cinque Terre" style="width:100%">
+		          	<div class="caption">
+				<p>Halbach Wheel Assembly</p>
+		            	<p>
+		            		<a class="btn btn-xs btn-primary" role="button" href="../images/structural/fig1.png" target="_blank">Expand</a>
+		            		<a class="btn btn-xs btn-default" role="button" href="../images/structural/fig1.png" download>Download</a>
+		            	</p>
+		          	</div>
+		      	</div>
+		    </div>
+		    <div class="col-md-4">
+		     	<div class="thumbnail">
+		          	<img src="../images/structural/th_fig2.png" alt="Cinque Terre" style="width:100%">
+		          	<div class="caption">
+				<p>Halbach Wheel Mesh</p>
+		            	<p>
+		            		<a class="btn btn-xs btn-primary" role="button" href="../images/structural/fig2.png" target="_blank">Expand</a>
+		            		<a class="btn btn-xs btn-default" role="button" href="../images/structural/fig2.png" download>Download</a>
+		            	</p>
+		          	</div>
+		      	</div>
+		    </div>
+		     <div class="col-md-4">
+		     	<div class="thumbnail">
+		          	<img src="../images/structural/th_fig3.jpg" alt="Cinque Terre" style="width:100%">
+		          	<div class="caption">
+				<p>Final Product</p>
+		            	<p>
+		            		<a class="btn btn-xs btn-primary" role="button" href="../images/structural/fig3.jpg" target="_blank">Expand</a>
+		            		<a class="btn btn-xs btn-default" role="button" href="../images/structural/fig3.jpg" download>Download</a>
+		            	</p>
+		          	</div>
+		      	</div>
+		    </div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+		     	<div class="thumbnail">
+		          	<img src="../images/structural/th_bat1.png" alt="Cinque Terre" style="width:100%">
+		          	<div class="caption">
+				<p>Battery Tray Assembly</p>
+		            	<p>
+		            		<a class="btn btn-xs btn-primary" role="button" href="../images/structural/bat1.png" target="_blank">Expand</a>
+		            		<a class="btn btn-xs btn-default" role="button" href="../images/structural/bat1.png" download>Download</a>
+		            	</p>
+		          	</div>
+		      	</div>
+		    </div>
+		    <div class="col-md-4">
+		     	<div class="thumbnail">
+		          	<img src="../images/structural/th_bat2.png" alt="Cinque Terre" style="width:100%">
+		          	<div class="caption">
+				<p>Meshed Battery Tray</p>
+		            	<p>
+		            		<a class="btn btn-xs btn-primary" role="button" href="../images/structural/bat2.png" target="_blank">Expand</a>
+		            		<a class="btn btn-xs btn-default" role="button" href="../images/structural/bat2.png" download>Download</a>
+		            	</p>
+		          	</div>
+		      	</div>
+		    </div>
+		     <div class="col-md-4">
+		     	<div class="thumbnail">
+		          	<img src="../images/structural/th_bat3.jpg" alt="Cinque Terre" style="width:100%">
+		          	<div class="caption">
+				<p>Final Product</p>
+		            	<p>
+		            		<a class="btn btn-xs btn-primary" role="button" href="../images/structural/bat3.jpg" target="_blank">Expand</a>
+		            		<a class="btn btn-xs btn-default" role="button" href="../images/structural/bat3.jpg" download>Download</a>
+		            	</p>
+		          	</div>
+		      	</div>
+		    </div>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 style="text-align: center; padding-bottom: 10px;">Structural Analysis - Ben Moldenhauer</h4>
+				<div class="btn-group btn-group-justified">
+					<div class="btn-group">
+						<button type="button" class="btn btn-primary" ng-click="showChal()">Challenge</button>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-primary" ng-click="showSpec()">Specifications</button>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-primary" ng-click="showSol()">Solution</button>
+					</div>
+				</div>
+
+			</div>
+			<div class="panel-body tinfo" ng-show="challenge">
+				<p>
+					Simulations are an essential component of the modern design process. Potential design flaws can be discovered and corrected prior to any prototyping and testing. Due to the complexity and originality of the Badgerloop pod, simulations, in the form of Finite Element Analysis (FEA), are an integral step in ensuring that components of the pod will properly function during operation. For example, a structural FEA of the Halbach Wheels was done in order to determine if the current design would be able to exert the necessary centripetal force required to restrain their Neodymium magnets. A thermal FEA was also done on the battery system to ensure that their maximum operating temperature would stay within safe limits. Thus, the purpose of the Structural Analysis team is to accurately simulate scenarios such as these and determine if the current designs will perform as intended. The rapid unexpected disassembly of a 1-ton pod traveling at 250 mph due to an electrical or structural failure would be best avoided.
+				</p>
+				<p>
+					While many results may be produced by FEA models, such as internal stress or temperature, these are most easily understood in terms of the Factor of Safety (FOS). This is defined as the ratio of the maximum value a specific material is able to support to what it is actually experiencing. For example, if a structural component has a FOS of .5, in terms of stress, this would indicate that the material is experiencing twice its maximum stress level and is permanently deforming and likely to fail. Conversely, a FOS of 5 conveys that the material is able to support a load five times greater before yielding occurs. This result is generalized, as in it is not specific to any certain material or scenario, and is a simple method for determining and conveying the validity of a design. A FOS of at least 1 is required for a design to be feasible, and Badgerloop has set a target minimum FOS at 2 in order to protect against any larger than expected loadings and ensure safe operation of the pod.
+				</p>
+			</div>
+			<div class="panel-body tinfo" ng-show="specs">
+				<p>
+					In order to determine if the aluminum structure of the Halbach wheel will survive operation, an FEA model was created to simulate the induced loading it would experience when rotated at its maximum rate of 5400 RPM while containing 20 lbs. of Neodymium magnets around its outer edge. This model was created in ANSYS as a static structural simulation. The Solidworks assembly, as shown in Fig.1, was imported into ANSYS as the model geometry. The material properties were then entered for the 6061 Aluminum of the Halbach Wheel and the Neodymium of the magnets. The contacts between the object surfaces were then set to No Separation or Frictionless instead of Bonded. The bonded condition constrains separation and sliding in order to prevent any movement between contacting surfaces, while no separation only prevents the surfaces from moving apart and frictionless allows any motion. This was done to allow for the magnets within their pockets to slide slightly outward from the center of the wheel and press against the outer wall, as would happen in reality. This is the main process the simulation attempts to emulate, as it is the primary source of centrifugal force in the assembly. The mesh for the geometry was then created, with sizing constraints placed around the magnet pockets, as this is the location of greatest interest and requires the greatest level of detail. 
+				</p>
+				<p>
+					To solve the static structural model, ANSYS requires sufficient boundary conditions to prevent rigid body motion. These define an approximately fixed location that can be used as a stationary reference point to base all deformation calculations around. In this scenario, the fixed location was taken to be the center of the wheel, as all other points are rotating about that location and it is effectively stationary within this reference frame. The rotation rate of 5400 RPM was then applied before solving the model.
+				</p>
+			</div>
+			<div class="panel-body tinfo" ng-show="solution">
+				<p>
+					As expected, the outer wall of the aluminum structure displays greater stress where the magnets will press against it. The thin sections between the magnets, which connect the outer wall to the interior of the structure understandably also support large loads as the resultant outward force from the magnets is transferred inward through these sections. It is also seen that the minimum FOS through the aluminum wheel is around 6, while the magnets are closer to 2. The values lower than this are located in the sharp corners of the magnet pockets. The program interprets these as unrealistically large stress concentrations, leading to the low FOS. In a real structure, it is physically impossible to produce such sharp corners. Adding fillets to the CAD model would alleviate this problem and lead to more uniform results. With that in mind, it can be safely concluded that this Halbach Wheel design will sufficiently support the magnets when rotating, and the fabrication and assembly process can confidently begin. Fig. 3 contains the final product.
+				</p>
+				<p>
+					 To supply adequate current to the Halbach Wheel motors, a large array of lithium polymer batteries was needed. During operation, this type of battery generates a large amount of heat that must be transferred away from the cell. If this is not done, the temperature of the batteries will continually increase until it expands to the point of rupturing, resulting in a hazardous chemical fire. To insure that this does not happen in the pod, a transient thermal FEA model was constructed in ANSYS to simulate the temperature rise of the batteries over 50 seconds, which is the projected duration of the competition run. First, a Solidworks assembly of the system, as prepared by the battery team, was imported into ANSYS as the geometry for the model, as seen in Fig.4.
+				</p>
+				<p>
+					To ensure safe functionality of the batteries in the Badgerloop pod, a maximum temperature of 100C was set. As seen in Fig.7, the transient model projects a maximum internal battery temperature of near 54C. This yields a FOS of 1.85 for the batteries, which is effectively an upper limit to what is expected, due to several simplifications in the model. Conductive transfer through the bottom of the tray and convective and radiative heat losses from the system were neglected. While convection with the surrounding air would be small, due to the vacuum environment, some transfer of heat would still be present. Nonetheless, this was taken as sufficient confirmation of the design and fabrication commenced. The completed battery tray is shown below in Fig.5. 
+				</p>
+		
+			</div>
+
+		</div>
+	</div>
+</div>
+
+
+
