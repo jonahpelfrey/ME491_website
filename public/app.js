@@ -29,11 +29,11 @@ app.config(function($routeProvider) {
 		controller: 'TeamController'
 	})
 	.when('/analysis', {
-		templateUrl: 'pages/structural.html',
+		templateUrl: 'pages/structuralanalysis.html',
 		controller: 'HomeController'
 	})
 	.when('/design', {
-		templateUrl: 'pages/fabrication.html',
+		templateUrl: 'pages/structuraldesign.html',
 		controller: 'DesignController'
 	})
 	.otherwise({
