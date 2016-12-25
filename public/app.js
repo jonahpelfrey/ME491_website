@@ -1,4 +1,4 @@
-var app = angular.module("badgerloop", ["ngRoute"]);
+var app = angular.module('badgerloop', ['ngRoute']);
 
 app.config(function($routeProvider) {
 	'use strict';
