@@ -5,6 +5,7 @@
 <div class="panel panel-default">
 	<div class="panel-heading">
 		<h4>Member Information</h4>
+		<input style="margin-bottom: 10px;" type="text" ng-model="mSearch" placeholder="Search">
 	</div>
 	<div class="panel-body contact">
 	<table class="table table-striped">
@@ -17,7 +18,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr ng-repeat="x in teams">
+			<tr ng-repeat="x in teams | filter : mSearch">
 			<td><span class="label label-success">{{x.team}}</span></td>
 			<td>{{x.firstname}}</td>
 			<td>{{x.lastname}}</td>
@@ -32,6 +33,7 @@
 <div class="panel panel-default">
 	<div class="panel-heading">
 		<h4>Faculty Information</h4>
+		<input style="margin-bottom: 10px;" type="text" ng-model="fSearch" placeholder="Search">
 	</div>
 	<div class="panel-body contact">
 	<table class="table table-striped">
@@ -44,7 +46,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr ng-repeat="a in advisors">
+			<tr ng-repeat="a in advisors | filter : fSearch">
 			<td><span class="label label-warning">{{a.dep}}</span></td>
 			<td>{{a.firstname}}</td>
 			<td>{{a.lastname}}</td>
