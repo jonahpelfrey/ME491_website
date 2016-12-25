@@ -17,3 +17,8 @@ body {
 	height: 625px;
 	overflow-y: scroll;
 }
+
+.section-header {
+	text-decoration: underline;
+	float: left;
+}
