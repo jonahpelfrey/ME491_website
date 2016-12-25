@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 app.use(methodOverride());
 
 app.get('*', function(req, res) {
-	res.sendFile(path.join(__dirname, './public/pages', 'home.html'));
+	res.sendFile(path.join(__dirname, './public/pages', 'index.html'));
 });
 
 app.listen(8000);
