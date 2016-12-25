@@ -20,5 +20,6 @@ app.get('*', function(req, res) {
 	res.sendFile(path.join(__dirname, './public/pages', 'index.html'));
 });
 
-app.listen(8000);
-console.log("App listening on port 8000");
+var server = app.listen(8000, function() {
+	console.log("Listening on port: " + server.address().port);
+});
