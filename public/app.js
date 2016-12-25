@@ -1,4 +1,4 @@
-var app = angular.module('badgerloop', ['teamController', 'homeController', 'designController', 'ngRoute']);
+var app = angular.module('badgerloop', ['teamController', 'homeController', 'designController', 'loginController', 'ngRoute']);
 
 app.config(function($routeProvider) {
 	'use strict';
@@ -35,6 +35,10 @@ app.config(function($routeProvider) {
 	.when('/design', {
 		templateUrl: 'pages/structuraldesign.html',
 		controller: 'DesignController'
+	})
+	.when('/login', {
+		templateUrl: 'pages/login.html',
+		controller: 'LoginController'
 	})
 	.otherwise({
 		redirectTo: '/'
