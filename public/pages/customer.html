@@ -1,0 +1,29 @@
+
+<h1 style="text-align: center;">
+<img style="padding-bottom: 10px;" src="../images/BadgerLoopLogoWhite.png" alt="BadgerLoop" width="800"> 
+</h1>
+
+<div class="row">
+	<div class="col-md-3"></div>
+	<div class="col-md-6">
+			<div class="row">
+				<label>Please enter your name: </label>
+				<input ng-model="currentCustomer.name"/>
+				<button ng-click="join()">Join</button>
+				<button ng-click="leave()">Leave</button>
+			</div>
+			<div class="row">
+				<h1>Current Customer: {{currentCustomer.name}}</h1>
+				<h1>New Customers:</h1>
+				<ul>
+					<li ng-repeat="customer in newCustomers">{{customer.name}}</li>
+				</ul>
+			</div>
+	</div>
+	<div class="col-md-3"></div>
+</div
+
+
+
+
+
