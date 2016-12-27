@@ -6,22 +6,42 @@
 <div class="row">
 	<div class="col-md-3"></div>
 	<div class="col-md-6">
-			<div class="row">
-				<label>Please enter your name: </label>
-				<input ng-model="currentCustomer.name"/>
-				<button ng-click="join()">Join</button>
-				<button ng-click="leave()">Leave</button>
+		<div class="panel panel-default">
+			<div class="panel-heading">Join Chat</div>
+			<div class="panel-body">
+				<div class="input-group" style="margin-bottom: 10px;">
+					<span class="input-group-addon"><i class="fa fa-user"></i></span>
+					<input ng-model="currentCustomer.name" class="form-control" placeholder="Name">
+				</div>
+				<div class="col-md-6">
+					<button ng-click="join()" class="btn btn-success btn-block">Join</button>
+				</div>
+				<div class="col-md-6">
+					<button ng-click="leave()" class="btn btn-danger btn-block">Leave</button>
+				</div>
 			</div>
-			<div class="row">
-				<h1>Current Customer: {{currentCustomer.name}}</h1>
-				<h1>New Customers:</h1>
-				<ul>
-					<li ng-repeat="customer in newCustomers">{{customer.name}}</li>
-				</ul>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">Members</div>
+			<div class="panel-body">
+				<table class="table table-striped">
+			        <thead>
+						<tr>
+						<th>Name</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="customer in newCustomers">
+							<td>{{customer.name}}</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
+		</div>
 	</div>
 	<div class="col-md-3"></div>
-</div
+</div>
+
 
 
 
